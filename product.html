@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Detail</title>
+  <link rel="stylesheet" href="myproducts.css">
+</head>
+<body>
+  <div class="class91">
+    <div class="class101"><b>E-commerce</b></div>
+    <div class="class111">
+      <a class="class121" href="index.html">Home</a>
+      <a class="class121" href="contact.html">Contact</a>
+      <a class="class121" href="about.html">About</a>
+      <a class="class121" href="signup.html">Sign Up</a>
+      <a class="class121" href="shop.html">Shop</a>
+    </div>
+  </div>
+
+  <h1 class="class5">Product Detail</h1>
+
+  <div id="productDetail" class="class6"></div>
+
+  <script>
+    function loadProduct() {
+      let products = JSON.parse(localStorage.getItem('products')) || [];
+      let productId = localStorage.getItem('currentProductId');
+      let product = products.find(p => p.id == productId);
+
+      if (product) {
+        let detail = document.getElementById('productDetail');
+        detail.innerHTML = `
+          <img src="${product.image}" class="class7">
+          <div class="class8">
+            <h2>${product.name}</h2>
+            <p>⭐⭐⭐⭐☆ (0 Reviews)</p>
+            <h3>$${product.price} <span style="color: green;">In Stock</span></h3>
+            <p>${product.description}</p>
+            <button class="class9">Add to cart</button>
+            <div class="class10">
+              <p><strong>Free Delivery</strong><br>Enter your postal code for Delivery Availability</p>
+              <p><strong>Return Delivery</strong><br>Free 30 Days Delivery Returns.</p>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    loadProduct();
+  </script>
+</body>
+</html>

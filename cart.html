@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart</title>
+  <link rel="stylesheet" href="cart.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="class7">
+        Summer sale for all swim suit and free express delivery - OFF 50%! 
+        <a class="class8" href="#">ShopNow</a>
+      </div>
+    
+      <div class="class9">
+        <div class="class10"><b>E-commerce</b></div>
+        <div class="class11">
+          <a class="class12" href="index.html">Home</a>
+          <a class="class12" href="contact.html">Contact</a>
+          <a class="class12" href="about.html">About</a>
+          <a class="class12" href="signup.html">Sign Up</a>
+          <a class="class12" href="shop.html">Shop</a>
+        </div>
+        <div class="class13">
+          <input class="class14" type="text" placeholder="What are you looking for ?">
+          <button class="icons2"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <a href="cart.html">
+          <button class="icons2"><i class="fa-solid fa-basket-shopping"></i></button>
+        </a>
+          <a href="user.html">
+            <button class="icons2"><i class="fa-solid fa-user"></i></button>
+          </a>
+          <span id="username">username</span>
+          <button id="loginLogoutBtn" onclick="handleLoginLogout()">log out</button>
+        </div>
+      </div>
+<div class="main-container">
+  <h2>Cart</h2>
+  <table id="cartTable">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+        <th>Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+<div class="cart-total" id="cartTotal">
+  <h3>Cart total</h3>
+  <p>Subtotal: <span id="subtotal">$0</span></p>
+  <p>Shipping: <span>free</span></p>
+  <p>Total: <span id="total">$0</span></p>
+  <button onclick="proceedToCheckout()">Process to checkout</button>
+</div>
+
+<script>
+  function logout() {
+    localStorage.removeItem('loggedInUser');
+    window.location.href = "home.html";
+  }
+
+  const user = JSON.parse(localStorage.getItem('loggedInUser'));
+  if (user && user.username) {
+    document.getElementById('username').innerText = user.username;
+  }
+
+   document.addEventListener('DOMContentLoaded', function() {
+    var cart = JSON.parse(localStorage.getItem('cart')) || [];
+    var cartContainer = document.getElementById('cart-container');
+
+    if (cart.length === 0) {
+        cartContainer.innerHTML = '<p>Cart is empty</p>';
+    } else {
+        cart.forEach(function(item) {
+            var itemElement = document.createElement('div');
+            itemElement.innerHTML = `
+                <img src="${item.image}" alt="${item.name}" style="width: 100px;">
+                <h3>${item.name}</h3>
+                <p>Price: $${item.price}</p>
+                <p>Quantity: ${item.quantity}</p>
+            `;
+            cartContainer.appendChild(itemElement);
+        });
+    }
+});
+</script>
+<script src="cart.js"></script>
+<script src="username.js"></script>
+</body>
+</html>

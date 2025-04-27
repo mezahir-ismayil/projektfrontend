@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="class7">
+        Summer sale for all swim suit and free express delivery - OFF 50%! 
+        <a class="class8" href="#">ShopNow</a>
+      </div>
+    
+      <div class="class9">
+        <div class="class10"><b>E-commerce</b></div>
+        <div class="class11">
+          <a class="class12" href="index.html">Home</a>
+          <a class="class12" href="contact.html">Contact</a>
+          <a class="class12" href="about.html">About</a>
+          <a class="class12" href="signup.html">Sign Up</a>
+          <a class="class12" href="shop.html">Shop</a>
+        </div>
+        <div class="class13">
+          <input class="class14" type="text" placeholder="What are you looking for ?">
+          <button class="icons2"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <a href="cart.html">
+          <button class="icons2"><i class="fa-solid fa-basket-shopping"></i></button>
+          </a>
+          <a href="user.html">
+            <button class="icons2"><i class="fa-solid fa-user"></i></button>
+          </a>
+          <span id="username">username</span>
+          <button id="loginLogoutBtn" onclick="handleLoginLogout()">log out</button>
+        </div>
+      </div>
+
+<div class="checkout-container">
+    <form class="checkout-form">
+        <input type="text" placeholder="First name">
+        <input type="text" placeholder="Last name">
+        <select>
+            <option>Choose...</option>
+            <option>State 1</option>
+            <option>State 2</option>
+        </select>
+        <input type="text" placeholder="Address">
+        <input type="text" placeholder="Zip">
+        <input type="tel" placeholder="+994">
+        <input type="email" placeholder="Email">
+        <div class="terms">
+            <input type="checkbox" id="terms">
+            <label for="terms">Agree to terms and conditions</label>
+        </div>
+    </form>
+
+    <div class="payment-summary">
+        <input type="text" placeholder="Card number">
+        <div class="expiration">
+            <input type="text" placeholder="MM">
+            <input type="text" placeholder="YY">
+            <input type="text" placeholder="Card security code">
+        </div>
+        <div class="summary">
+            <div>Subtotal <span id="subtotal">$</span></div>
+            <div>Shipping <span>free</span></div>
+            <div>Total <span id="total">$</span></div>
+        </div>
+        <button class="place-order">Place order</button>
+    </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var cart = JSON.parse(localStorage.getItem('cart')) || [];
+      var subtotalElement = document.getElementById('subtotal');
+      var totalElement = document.getElementById('total');
+  
+      var subtotal = 0;
+  
+      cart.forEach(function(item) {
+          subtotal += item.price * item.quantity;
+      });
+  
+      subtotalElement.textContent = '$' + subtotal.toFixed(2);
+      totalElement.textContent = '$' + subtotal.toFixed(2);
+  });
+  </script>
+<script src="username.js"></script>
+</body>
+</html>

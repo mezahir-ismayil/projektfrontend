@@ -1,0 +1,366 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+.class7 {
+  background-color: rgb(229, 73, 73);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.class8 {
+  color: white;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+.class9 {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 1px solid lightgray;
+}
+
+.class10 {
+  font-size: 24px;
+}
+
+.class11 a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.class13 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.class14 {
+  padding: 6px 10px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.icons2 {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#usernameDisplay {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+#loginLogoutBtn {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.img{
+    background-color: rgb(0, 0, 0);
+}
+img {
+
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 597px;
+    width: 842x; 
+}
+.classhop {
+    text-align: center;
+    padding: 50px 20px;
+  }
+h2 {
+    font-family:sans-serif;
+    margin-right: 950px;
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+.img3 {
+    display: flex;
+    justify-content: space-between; 
+  }
+.class22,
+.class33 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+.item {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+.class22 img {
+    background-color: #ffffff;
+    width: 500px; 
+    height: 600px; 
+    margin-left: 80px;
+  }
+.class33 img {
+    width: 270px;
+    height: 220px; 
+    margin-right: 50px;
+  }
+.top img{
+    width: 300px;
+    height: 250px;
+    margin-left: 50px;
+    margin-top: 195px;
+  }
+.class22 h3,
+.class33 h3 {
+  font-family:sans-serif;
+    margin: 0;
+    font-size: 22px;
+  }
+button {
+    background: none;
+    text-decoration: underline;
+    border: none;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .icons2 {
+    background: none;
+    text-decoration: underline;
+    border: none;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: transform 0.7s;
+  }
+  .icons2:active{
+    transform: scale(1.8);
+  }
+.class33 .img2 a,
+.class33 .class44 a {
+    margin-left: 10px;
+  }
+.class22:hover,
+.img2:hover,
+.class44:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+  }
+.feedback {
+  font-family:sans-serif;
+    text-align: center;
+    font-size: 26px;
+    color: red;
+    margin: 60px 0 40px;
+  }
+.feed {
+  font-family:sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+  }
+.div1 {
+    display: flex;
+    margin-right:30px;
+    background-color: #f3f3f3;
+    padding: 25px;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+  }
+.div2 {
+    display: flex;
+    margin-right:30px;
+    background-color: #f8dcdc;
+    padding: 25px;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+  }
+.div3 {
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 25px;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+  }
+.div1 h4,
+.div2 h4,
+.div3 h4 {
+    color: darkred;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+.div1 p,
+.div2 p,
+.div3 p {
+    margin-right: 100px;
+    margin-top: 50px;
+    font-size: 16px;
+  }
+.div {
+    padding: 50px;
+    text-align: center;
+  }
+.div10 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+    margin-top: 30px;
+  }
+.product {
+     font-family:sans-serif;
+    width: 23%; 
+    height: 400px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    transition: 0.3s;
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+.product h3 {
+    font-family:sans-serif;
+    font-size: 20px;
+    margin: 10px 0;
+  }
+.product p {
+    font-family:sans-serif;
+    font-size: 14px;
+    color: gray;
+    line-height: 20px;
+  }
+.product button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: 1px solid black;
+    background: white;
+  }
+.product:hover {
+    transform: scale(1.05);
+  }
+.Images {
+    margin: 10px 0px;
+    position: relative;
+    height: 120px; 
+    background-color: white;
+    margin-bottom: 15px;
+  }
+.ipad1{
+    width: 210px;
+    height: 140px;
+    background-color: #ffffff;
+  }
+.macbook1{
+    width: 210px;
+    height: 140px;
+    background-color: #ffffff;
+  }
+.iphone1{
+    width: 210px;
+    height: 140px;
+    background-color: #ffffff;
+  }
+.Watch {
+    width: 130px;
+    height: 116px;
+    position: absolute;
+    left: 130px;
+    top:10px;
+    transition: 0.5s; 
+    transform: rotate(-137deg);
+    z-index: 15;
+  }
+.Airpods {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    left: 25px; 
+    transition: 0.5s; 
+    transform: rotate(-12deg);
+    z-index: 2;
+  }
+  .Watch:hover{
+    transition: 0.5s; 
+    transform: rotate(12deg);
+  }
+.red {
+    background: #d94f4f;
+    padding: 60px 40px;
+    color: white;
+  
+.div9 {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+  
+.Exclusive, .Support, .Account, .Link, .App {
+        width: 18%;
+  
+h3 {      font-family:sans-serif;
+          font-size: 18px;
+          margin-bottom: 15px;
+        }
+  
+p {       font-family:sans-serif;
+          font-size: 14px;
+          margin: 6px 0;
+          line-height: 20px;
+        }
+  
+input {
+          width: 180px;
+          margin-top: 10px;
+          padding: 8px;
+          border: none;
+          
+        }
+      }
+    }
+  }
+.App {
+    padding: 30px;
+  }
+.apps {
+    display: flex;
+    align-items: flex-start;
+  }
+.QR {
+    width: 100px;
+    height: 110px;
+    margin-top: 10px;
+  }
+.stores {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+.Store,
+.store1 {
+  margin-bottom: -45px;
+  width: 100px;
+  height: 80px;
+  }

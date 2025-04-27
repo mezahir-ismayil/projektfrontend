@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Product</title>
+  <link rel="stylesheet" href="createproduct.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <div class="class71">
+    Summer sale for all swim suit and free express delivery - OFF 50%! 
+    <a class="class8" href="#">ShopNow</a>
+  </div>
+
+  <div class="class9">
+    <div class="class10"><b>E-commerce</b></div>
+    <div class="class11">
+      <a class="class12" href="index.html">Home</a>
+      <a class="class12" href="contact.html">Contact</a>
+      <a class="class12" href="about.html">About</a>
+      <a class="class12" href="signup.html">Sign Up</a>
+      <a class="class12" href="shop.html">Shop</a>
+    </div>
+    <div class="class13">
+      <input class="class14" type="text" placeholder="What are you looking for ?">
+      <button class="icons2"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <a href="cart.html">
+      <button class="icons2"><i class="fa-solid fa-basket-shopping"></i></button>
+    </a>
+      <a href="user.html">
+        <button class="icons2"><i class="fa-solid fa-user"></i></button>
+      </a>
+      <span id="username">username</span>
+      <button id="loginLogoutBtn" onclick="handleLoginLogout()">log out</button>
+    </div>
+  </div>
+  <div class="class55" id="dynamic-products">
+  </div>
+
+<h1 class="class5">Create product</h1>
+
+<div class="class6">
+  <form id="createForm" onsubmit="event.preventDefault(); saveProduct();">
+    <label>Brand</label>
+    <input type="text" id="brand" required>
+
+    <label>Model</label>
+    <input type="text" id="model" required>
+
+    <label>Category</label>
+    <input type="text" id="category" required>
+
+    <label>Description</label>
+    <textarea id="description" required></textarea>
+
+    <label>Price</label>
+    <input type="price" id="price" required>
+
+    <label>Image URL</label>
+    <input type="text" id="image" required>
+
+    <img id="preview" src="" alt="photo" style="width: 100px; margin-top: 10px;">
+
+    <div style="margin-top: 20px;">
+      <button type="submit" class="blue">Save</button>
+      <button type="reset" class="red">Reset</button>
+    </div>
+  </form>
+</div>
+<script src="username.js"></script>
+<script src="saveproduct.js"></script>
+<script src="myproduct.js"></script>
+</body>
+</html>

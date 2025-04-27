@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+  <html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="edit-product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Редактировать товар</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <div class="class71">
+      Summer sale for all swim suit and free express delivery - OFF 50%! 
+      <a class="class8" href="#">ShopNow</a>
+    </div>
+  
+    <div class="class9">
+      <div class="class10"><b>E-commerce</b></div>
+      <div class="class11">
+        <a class="class12" href="index.html">Home</a>
+        <a class="class12" href="contact.html">Contact</a>
+        <a class="class12" href="about.html">About</a>
+        <a class="class12" href="signup.html">Sign Up</a>
+        <a class="class12" href="shop.html">Shop</a>
+      </div>
+      <div class="class13">
+        <input class="class14" type="text" placeholder="What are you looking for ?">
+        <button class="icons2"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <a href="cart.html">
+        <button class="icons2"><i class="fa-solid fa-basket-shopping"></i></button>
+      </a>
+        <a href="user.html">
+          <button class="icons2"><i class="fa-solid fa-user"></i></button>
+        </a>
+        <span id="username">username</span>
+        <button id="loginLogoutBtn" onclick="handleLoginLogout()">log out</button>
+      </div>
+    </div>
+    <div class="class55" id="dynamic-products">
+    </div>
+    <h1>Редактировать товар</h1>
+    
+    <form id="editForm">
+      <label for="brand">Бренд</label>
+      <input type="text" id="brand" required><br>
+  
+      <label for="model">Модель</label>
+      <input type="text" id="model" required><br>
+  
+      <label for="category">Категория</label>
+      <input type="text" id="category" required><br>
+  
+      <label for="description">Описание</label>
+      <input type="text" id="description" required><br>
+  
+      <label for="price">Цена</label>
+      <input type="number" id="price" required><br>
+  
+      <label for="image">Ссылка на изображение</label>
+      <input type="text" id="image" required><br>
+  
+      <button type="submit">Сохранить изменения</button>
+    </form>
+  
+    <a href="myproducts.html" class="back-button">Назад к списку товаров</a>
+  
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const productId = localStorage.getItem("editProductId");
+        let products = JSON.parse(localStorage.getItem('myProducts')) || [];
+        let product = products.find(p => p.id == productId);
+  
+        if (product) {
+          document.getElementById("brand").value = product.brand;
+          document.getElementById("model").value = product.model;
+          document.getElementById("category").value = product.category;
+          document.getElementById("description").value = product.description;
+          document.getElementById("price").value = product.price;
+          document.getElementById("image").value = product.image;
+        }
+      });
+  
+      document.getElementById("editForm").addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const productId = localStorage.getItem("editProductId");
+        let products = JSON.parse(localStorage.getItem('myProducts')) || [];
+        let productIndex = products.findIndex(p => p.id == productId);
+  
+        if (productIndex !== -1) {
+          products[productIndex].brand = document.getElementById("brand").value;
+          products[productIndex].model = document.getElementById("model").value;
+          products[productIndex].category = document.getElementById("category").value;
+          products[productIndex].description = document.getElementById("description").value;
+          products[productIndex].price = document.getElementById("price").value;
+          products[productIndex].image = document.getElementById("image").value;
+          localStorage.setItem('myProducts', JSON.stringify(products));
+          window.location.href = "myproducts.html";
+        }
+      });
+    </script>
+  </body>
+  </html>
+  </script>
+  <script src="username.js"></script>
+</body>
+</html>
