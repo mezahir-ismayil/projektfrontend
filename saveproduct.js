@@ -1,10 +1,17 @@
-function saveProduct() {
+
+
+// image.addEventListener("input", () => { 
+  //   preview.src = image.value;
+  //   let preview = document.getElementById("preview");
+  // })
+  function saveProduct() {
     const brand = document.getElementById("brand").value;
     const model = document.getElementById("model").value;
     const category = document.getElementById("category").value;
     const description = document.getElementById("description").value;
     const price = document.getElementById("price").value;
     const image = document.getElementById("image").value;
+    
 
     const product = {
       id: Date.now(),

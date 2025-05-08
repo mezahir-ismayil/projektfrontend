@@ -111,3 +111,7 @@ body {
     border-radius: 4px;
     cursor: pointer;
   }
+  #description {
+    width: 103%;
+    border: 1px solid #ccc;
+  }

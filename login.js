@@ -11,7 +11,7 @@ function login() {
   ) {
     localStorage.setItem("loggedInUser", JSON.stringify(savedUser));
     alert("Успешный вход");
-    window.location.href = "shop.html";
+    window.location.href = "index.html";
   } else {
     alert("Неверные данные");
   }

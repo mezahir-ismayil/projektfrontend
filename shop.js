@@ -21,9 +21,39 @@
       container.appendChild(card);
     });
   }
+
+
+  renderProducts();
+
+
+function renderProducts() {
+  let products = JSON.parse(localStorage.getItem('myProducts')) || [];
+  let parent = document.getElementsByClassName('class78')[0];
+
+
+  products.forEach(product => {
+    let newDiv = document.createElement('div');
+
+    newDiv.innerHTML = `
+    <img src="${product.image}" alt="Изображение">
+      <h1>${product.brand + product.model}</h1>
+      <p>${product.price}</p>
+      <p>★★★★☆ (42)</p>
+      <button class = "button1" >Add to Cart</button>
+    `;
+    newDiv.classList.add("product");
+    newDiv.addEventListener("click", ()=> {
+      window.location="details.html";
+    })
+    parent.append(newDiv);
+  });
+}
+
+
+  // localStorage.clear();
   
-  function addToCart(name, price, image) {
-    alert(Addedtocart: ${name});
-  }
+  // function addToCart(name, price, image) {
+  //   alert(Addedtocart: ${name});
+  // }
   
-  window.onload = displayProducts;
+  // window.onload = displayProducts;
