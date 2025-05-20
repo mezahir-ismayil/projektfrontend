@@ -25,17 +25,18 @@
 
   renderProducts();
 
+  // let newDiv;
 
-function renderProducts() {
-  let products = JSON.parse(localStorage.getItem('myProducts')) || [];
-  let parent = document.getElementsByClassName('class78')[0];
+  function renderProducts() {
+    let products = JSON.parse(localStorage.getItem('myProducts')) || [];
+    let parent = document.getElementsByClassName('class78')[0];
 
 
   products.forEach(product => {
-    let newDiv = document.createElement('div');
+  let newDiv = document.createElement('div');
 
     newDiv.innerHTML = `
-    <img src="${product.image}" alt="Изображение">
+    <img src="${product.image}" alt="Изображение" class="newElem">
       <h1>${product.brand + product.model}</h1>
       <p>${product.price}</p>
       <p>★★★★☆ (42)</p>
@@ -48,6 +49,17 @@ function renderProducts() {
     parent.append(newDiv);
   });
 }
+
+let count = document.getElementsByClassName("newElem");
+
+   for(let k = 0; k<count.length; k++){
+      count[k].addEventListener("click" ,()=>{
+      localStorage.setItem("openDetails", k);
+      
+    })
+  }
+
+
 
 
   // localStorage.clear();

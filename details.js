@@ -1,21 +1,17 @@
-document.getElementById = function(){
-    let image = document.getElementById("image").value;
-    let price = document.getElementById("price").value;
-    let name = document.getElementById("name").value;
-}
-function addToCart(name, price, image) {
-    var cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let image = document.getElementById("image");
+    let price = document.getElementById("price");
+    let name1 = document.getElementById("name");
+    let description = document.getElementById("description");
 
-    var existingItem = cart.find(function(item) {
-        return item.name === name;
-    });
 
-    if (existingItem) {
-        existingItem.quantity += 1;
-    } else {
-        cart.push({ name: name, price: price, image: image, quantity: 1 });
-    }
+addNewProducts();
 
-    localStorage.setItem('cart', JSON.stringify(cart));
-    alert('Product added to cart!');
+function addNewProducts() {
+    let productList = JSON.parse(localStorage.getItem("myProducts"));
+    let nummer = +localStorage.getItem("openDetails");
+    console.log(productList[nummer].image);
+    
+    image.src = productList[nummer].image;
+    name1.innerHTML = productList[nummer].brand + " " + productList[nummer].model;
+    description.innerHTML = productList[nummer].description;
 }
